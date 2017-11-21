@@ -1,4 +1,4 @@
-# customersAPI
+# Customers API
 Customers API
 
 
@@ -28,3 +28,19 @@ Common attributes to all the resources and its methods are:
 3.  Retrieve single customer by providing {customerid} path parameters    
 4.  Update single customer by providing {customerid} path parameters
 5.  Delete a customer by providing {customerid} path parameters.
+
+Consumer usecase:
+
+1. A consumer may periodically (every 5 minutes) consume the API to enable it (the consumer) to maintain a copy of the provider API's customers (the API represents the system of record)
+  - We could apply Rate limiting policy on the API which is bind to specific client id or apiKey(in my case) to limit the number of       calls that are allowed to consume on this API. However I have implemented such policies on Apigee, but not implemented on Mule           specailly on API RAML specificaiton( I would definitely try to explore this given some time).
+ 
+2. A mobile application used by customer service representatives that uses the API to retrieve and update the customers details
+  - We could restrict the payload size and query parameters to handle less data volume across the network by adding policies around JSON
+    content validations and setting up different SLA for client id or apiKey which has provided to mobile consumers.
+
+
+3. Simple extension of the API to support future resources such as orders and products
+  - CustomersAPI specification has Order type defined and is not consumed on any of the operations and could be included in the Customer 
+    type as an optional field so that we could extend customer object to have order details embedded within it.
+  - We could make use of LinkModel to explicitley relate Customer and Order entities seperatley if required.
+  - We could add new paths to the existing customer api to provide explicit access to orders which are related to customer through           relationhip features.
