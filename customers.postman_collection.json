@@ -1,0 +1,98 @@
+{
+	"id": "538b7b51-44ae-5d4d-244a-e3a0b8ae7a35",
+	"name": "customers",
+	"description": "",
+	"order": [
+		"9c7127ac-678e-657e-d9d8-23738b1f2f3e",
+		"91676672-5043-c687-bb5d-c767bac725d6"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1511172679129,
+	"owner": "428491",
+	"public": false,
+	"requests": [
+		{
+			"id": "91676672-5043-c687-bb5d-c767bac725d6",
+			"headers": "api-request-id: 1\n",
+			"headerData": [
+				{
+					"key": "api-request-id",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/v1/customers?limit=1&start=1",
+			"queryParams": [
+				{
+					"key": "limit",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "start",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "538b7b51-44ae-5d4d-244a-e3a0b8ae7a35",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8081/v1/customers?limit=1&start=1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1511172694154,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9c7127ac-678e-657e-d9d8-23738b1f2f3e",
+			"headers": "api-request-id: 1\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "api-request-id",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/v1/customers/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "538b7b51-44ae-5d4d-244a-e3a0b8ae7a35",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8081/v1/customers/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1511172680299,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n       \n        \"firstname\": \"foo\",\n        \"lastname\": 123, \n        \"addresses\": [\n            {\n                \"street\": \"45 Tory St\",\n                \"postcode\": 6011,\n                \"city\": \"Wellington\",\n                \"country\": \"Australia\",\n                \"type\": \"residential\"\n            }\n        ]\n    }"
+		}
+	]
+}
